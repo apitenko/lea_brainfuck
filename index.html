@@ -1,0 +1,101 @@
+<!-- http://justice.loyola.edu/~mcoffey/ -->
+<html>
+
+<head>
+  <title>Lea interpreter</title>
+  <style>
+body,td,caption{background:#cccccc;color:#000000;font-family:monospace;font-size:12px}
+a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1px dashed}
+</style>
+</head>
+
+<body>
+  <form id="f">
+    <table width="100%" border=0>
+      <tr>
+        <td width="40%" align=left valign=top>
+          <table border=1 cellspacing=0 cellpadding=5>
+            <caption><s>brainfuck</s> <b>Lea commands</b>
+            <tr>
+              <td>Hi</td>
+              <td>&gt;</td>
+              <td>increment pointer
+            <tr>
+              <td>Bye</td>
+              <td>&lt;</td>
+              <td>decrement pointer
+            <tr>
+              <td>Lea</td>
+              <td>+</td>
+              <td>increment value at pointer
+            <tr>
+              <td>(nods)</td>
+              <td>-</td>
+              <td>decrement value at pointer
+            <tr>
+              <td>Wait</td>
+              <td>[</td>
+              <td>begin loop (continues while value at pointer is non-zero)
+            <tr>
+              <td>Meet</td>
+              <td>]</td>
+              <td>end loop
+            <tr>
+              <td>Thanks</td>
+              <td>,</td>
+              <td>read one character from input into value at pointer
+            <tr>
+              <td>Sorry</td>
+              <td>.</td>
+              <td>print value at pointer to output as a character
+            <tr>
+              <td>How</td>
+              <td>#</td>
+              <td>display debugging info (in debug mode)
+            <tr>
+              <td colspan=3 align=center>Separate words with spaces. Words are case-insensitive. Lea can't speak any other words, thus, they will be ignored.
+          </table>
+          <p>Learn more about the Brainfuck programming language:<br>&nbsp;
+            <a href="http://www.catseye.mb.ca/esoteric/bf/">Source</a> |
+            <a href="http://www.muppetlabs.com/~breadbox/bf/">@ Muppetlabs</a> |
+            <a href="http://esoteric.sange.fi/brainfuck/">Code archive</a>
+        <td width="60%" align=center valign=top>
+          <table width="1%" border=0>
+            <tr>
+              <td align=left valign=bottom>
+                <b><span class=t title="Warning: clicking these links will replace the existing code with a new programsorry... ">programs:</span></b>
+                <a href="javascript:void(0)" onClick="b.value='Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! wait Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Bye. (nods) meet Hi! sorry...   H\nBye. Lea! Lea! Lea! wait Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Bye. (nods) meet Hi! sorry...     i\nwait (nods) meet Bye. Lea! Lea! Lea! wait Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Bye. (nods) meet Hi! sorry...  !'">hello</a>
+                <a href="javascript:void(0)" onClick="b.value='Thanks! Wait sorry thanks Meet'">echo</a>
+                <a href="javascript:void(0)" onClick="b.value='Lea! wait Hi! thanks! meet Bye. (nods) wait Lea! sorry... Bye. (nods) meet '">reverse_input</a>
+                <!--<a href="javascript:void(0)" onClick="b.value='(nods) Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Lea! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Lea! Hi! Lea! Lea! Hi! Hi! Hi! Lea! Hi! Lea! Hi! Lea! Hi! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Lea! Hi! Hi! Lea! Hi! Hi! Lea! Hi! Lea! Lea! Hi! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Hi! Lea! Lea! Hi! Hi! Hi! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Lea! Lea! Lea! Hi! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Lea! Lea! Hi! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Lea! Lea! Hi! Hi! Lea! Lea! Hi! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Hi! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Lea! Hi! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Lea! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Hi! Hi! Hi! Hi! Lea! Hi! Lea! Hi! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Hi! Lea! Lea! Hi! Hi! Hi! Hi! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Lea! Hi! Lea! Hi! Lea! Lea! Hi! Hi! Hi! Hi! Hi! Hi! Lea! Lea! Hi! Hi! Hi! Lea! Hi! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Hi! Hi! Hi! Hi! Lea! Hi! Lea! Hi! Hi! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Hi! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Lea! Lea! Lea! Hi! Hi! Hi! Lea! Hi! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Hi! Lea! Hi! Lea! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Lea! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Hi! Hi! Lea! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Lea! Hi! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Hi! Hi! Hi! Lea! Lea! Hi! Lea! Hi! Lea! Lea! Lea! Hi! Hi! Lea! Hi! Lea! Lea! Hi! Hi! Hi! Hi! Lea! Hi! Lea! Hi! Lea! Lea! Hi! Lea! Hi! Hi! Hi! Hi! Lea! Lea! Lea! Hi! Hi! Lea! Lea! Lea! Hi! Hi! Hi! Lea! wait wait (nods) Hi! Hi! Lea! Bye. Bye. meet Bye. Lea! meet Lea! Lea! Lea! Lea! Lea! wait (nods) Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Bye. meet Hi! sorry... wait Lea! meet Hi! Hi! wait Bye. Bye. Lea! Lea! Lea! Lea! Lea! Lea! Lea! wait (nods) Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Bye. meet Hi! (nods) sorry... (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) (nods) Hi! (nods) wait (nods) Bye. sorry... Bye. Lea! Hi! Hi! meet Bye. wait Lea! meet Bye. Lea! Hi! Hi! Hi! meet Bye. Bye. Bye. wait (nods) wait (nods) wait (nods) wait Hi! Hi! Lea! Bye. Lea! Lea! Lea! Lea! Lea! Lea! wait (nods) Hi! Lea! Lea! Lea! Lea! Lea! Bye. meet meet Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Bye. meet Hi! Lea! Lea! Lea! Bye. meet Lea! Lea! Lea! Lea! Lea! Lea! wait (nods) Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Bye. meet Hi! Lea! Bye. Bye. Bye. (nods) wait (nods) Hi! Hi! Hi! Lea! Lea! Bye. Bye. Bye. meet Hi! wait (nods) Hi! Hi! sorry... Bye. Bye. meet Bye. Bye. meet '">quine</a> -->
+                <p><b><span class=t title="Click to append code to your programsorry...  Review the code before you use it! It may make assumptions about the values at or near the pointersorry... ">functions:</span></b>
+                  <a href="javascript:void(0)" onClick="b.value+=' ( wait Bye. Lea! Hi! (nods) meet Bye. ) '">add</a>
+                  <a href="javascript:void(0)" onClick="b.value+=' ( wait Hi! Lea! Hi! Lea! Bye. Bye. (nods) meet Hi! Hi! wait Bye. Bye. Lea! Hi! Hi! (nods) meet ) '">dup</a>
+                  <a href="javascript:void(0)" onClick="b.value+=' ( wait Hi! Lea! bye (nods) meet bye wait Hi! Lea! bye (nods) meet Hi! Hi! wait bye bye Lea! Hi! Hi! (nods) meet bye ) '">swap</a>
+                  <a href="javascript:void(0)" onClick="b.value+=' ( HI! wait (nods) meet HI! wait (nods) meet bye bye  bye wait HI! wait HI! Lea! HI! Lea! bye bye (nods) meet  HI! wait bye Lea! HI! (nods) meet  bye bye (nods) meet  HI! HI! HI! wait bye bye bye Lea! HI! HI! HI! (nods) meet bye bye bye ) '">mul</a>
+                  <a href="javascript:void(0)" onClick="b.value+=' ( {condition} wait {conditional code} wait (nods) meet meet ) '">if</a>
+              </td>
+              <td align=right>Debug&nbsp;mode:<input type=checkbox id="d"><br>Large variables:<input type=checkbox id="q"><br>
+                Prompt for input:<input type=checkbox id="r"><br>Alert when finished:<input type=checkbox id="w">
+            <tr>
+              <td colspan=3>
+                <textarea id="b" cols=50 rows=9></textarea>
+            <tr>
+              <td><b>code ^</b></td>
+              <td align=right><input type=button value=execute onClick="x(b.value)"> <input type=button value=clear
+                  onClick="b.value=''">
+          </table>
+          <br><b>input:</b><input type=text id="i" size=44> <input type=button value=clear onClick="i.value=''">
+          <table width="1%" border=0>
+            <tr>
+              <td colspan=2><textarea id="o" cols=50 rows=4></textarea>
+            <tr>
+              <td><b>output ^</b></td>
+              <td align=right><input type=button value=clear onClick="o.value=''">
+          </table>
+    </table>
+  </form>
+  <script src="./balls.js"></script>
+</body>
+
+</html>
