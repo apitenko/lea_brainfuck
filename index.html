@@ -9,11 +9,15 @@ a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1
 </style>
 </head>
 
-<body>
+<body style="
+      flex-direction: column;
+      display: flex;
+      align-content: center;
+      justify-content: center;">
   <form id="f">
     <table width="100%" border=0>
       <tr>
-        <td width="40%" align=left valign=top>
+        <td style="width:40%;" align=left valign=top>
           <table border=1 cellspacing=0 cellpadding=5>
             <caption><s>brainfuck</s> <b>Lea commands</b>
             <tr>
@@ -59,7 +63,7 @@ a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1
           <br />
           <a href="https://github.com/apitenko/lea_brainfuck">Lea sources</a> |
           <a href="https://sange.fi/esoteric/brainfuck/impl/interp/i.html">Original</a>
-        <td width="60%" align=center valign=top>
+        <td style="width:60%;" align=center valign=top>
           <table width="1%" border=0>
             <tr>
               <td align=left valign=bottom>
@@ -85,7 +89,7 @@ a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1
               <td align=right><input type=button value=execute onClick="x(b.value)"> <input type=button value=clear
                   onClick="b.value=''">
           </table>
-          <br><b>input:</b><input type=text id="i" size=44> <input type=button value=clear onClick="i.value=''">
+          <br><b>input:</b><input type=text id="i" value="12345" size=44> <input type=button value=clear onClick="i.value=''">
           <table width="1%" border=0>
             <tr>
               <td colspan=2><textarea id="o" cols=50 rows=4></textarea>
@@ -96,11 +100,14 @@ a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1
     </table>
   </form>
   <div style="
-      position: absolute;
-      right: 0;
+      flex-direction: row-reverse;
+      display: flex;
+    width: 100%;
   ">
-    <a id="brackets_message" style="display: none"> Unbalanced brackets (wait / meet)!</a>
+    <div style="width:20%;"></div>
     <img id="lea" src="res/lea0.png">
+    <a id="brackets_message" style="display: flex;
+    flex-direction: column-reverse;">Hi!</a>
   </div>
   <script src="./balls.js"></script>
 </body>

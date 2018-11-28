@@ -18,8 +18,14 @@ var releaseTheBalls = function (isGood) {
   var lea_images = isGood ? lea_good : lea_bad;
   lea.src = "res/" + lea_images[Math.floor(Math.random() * lea_images.length)];
 
-  brackets_message.setAttribute("style", isGood ? "display: none" : "display: hidden");
+  brackets_message.setAttribute("style", isGood ? "display: none;" : "display: flex; flex-direction: column-reverse;");
+  brackets_message.innerHTML = "Unbalanced brackets (wait/meet) !";
+}
 
+var yay = function () {
+  lea.src = "res/lea7.png";
+  brackets_message.setAttribute("style", "display: flex; flex-direction: column-reverse;");
+  brackets_message.innerHTML = "For teh lulz!";
 }
 
 window.f = document.getElementById('f');
@@ -33,7 +39,7 @@ window.w = document.getElementById('w');
 
 
 function x(input) {
-
+  var yayd = false;
   input = input.split(' ');
 
   var c = [];
@@ -122,10 +128,11 @@ function x(input) {
     } else if (c[j].indexOf('sorry') != -1 || c[j] == '.') {
       f.o.value += String.fromCharCode(data[dataPointer])
     } else if (c[j].indexOf('why') != -1) {
-      alert('For teh lulz!');
+      yay();
+      yayd = true;
     }
   }
-  releaseTheBalls(true);
+  !yayd && releaseTheBalls(true);
   if (f.w.checked) {
     window.alert("Execution completed.")
   }
