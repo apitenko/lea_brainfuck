@@ -6,6 +6,10 @@ Hi!
 
 Meet Lea. Thanks!
 
+
+Test online: http://88.201.235.47/lea/ (server might be down)
+
+
 https://en.wikipedia.org/wiki/Brainfuck
 
 https://sange.fi/esoteric/brainfuck/impl/interp/i.html
