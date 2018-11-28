@@ -1,3 +1,27 @@
+var lea_good = [
+  "lea0.png",
+  "lea1.png",
+  "lea2.png",
+  "lea3.png"
+]
+
+var lea_bad = [
+  "lea4.png",
+  "lea5.png",
+  "lea6.png"
+]
+
+// Lea isn't ugly
+var lea = document.getElementById("lea");
+var brackets_message = document.getElementById("brackets_message");
+var releaseTheBalls = function (isGood) {
+  var lea_images = isGood ? lea_good : lea_bad;
+  lea.src = "res/" + lea_images[Math.floor(Math.random() * lea_images.length)];
+
+  brackets_message.setAttribute("style", isGood ? "display: none" : "display: hidden");
+
+}
+
 window.f = document.getElementById('f');
 window.b = document.getElementById('b'); // code input
 window.d = document.getElementById('d');
@@ -50,7 +74,7 @@ function x(input) {
     }
   }
   if (dataPointer != 0) {
-    alert("Unbalanced brackets (wait/meet)!");
+    releaseTheBalls(false);
     return
   }
   for (j = 0; j < commandsLength; j++) {
@@ -75,7 +99,7 @@ function x(input) {
         data[dataPointer]--
       }
     } else if (c[j].indexOf('meet') != -1 || c[j] == ']') {
-      j = s[j]-1
+      j = s[j] - 1
     } else if (c[j].indexOf('wait') != -1 || c[j] == '[') {
       if (data[dataPointer] == 0) {
         j = e[j];
@@ -101,6 +125,7 @@ function x(input) {
       alert('For teh lulz!');
     }
   }
+  releaseTheBalls(true);
   if (f.w.checked) {
     window.alert("Execution completed.")
   }

@@ -4,7 +4,7 @@
 <head>
   <title>Lea interpreter</title>
   <style>
-body,td,caption{background:#cccccc;color:#000000;font-family:monospace;font-size:12px}
+    body,td,caption{background:#cccccc;color:#000000;font-family:monospace;font-size:12px}
 a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1px dashed}
 </style>
 </head>
@@ -53,11 +53,12 @@ a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1
               <td>#</td>
               <td>display debugging info (in debug mode)
             <tr>
-              <td colspan=3 align=center>Separate words with spaces. Words are case-insensitive. Lea can't speak any other words, thus, they will be ignored.
+              <td colspan=3 align=center>Separate words with spaces. Words are case-insensitive. Lea can't speak any
+                other words, thus, they will be ignored.
           </table>
-          <br/>
-            <a href="https://github.com/apitenko/lea_brainfuck">Lea sources</a> |
-            <a href="https://sange.fi/esoteric/brainfuck/impl/interp/i.html">Original</a>
+          <br />
+          <a href="https://github.com/apitenko/lea_brainfuck">Lea sources</a> |
+          <a href="https://sange.fi/esoteric/brainfuck/impl/interp/i.html">Original</a>
         <td width="60%" align=center valign=top>
           <table width="1%" border=0>
             <tr>
@@ -94,6 +95,13 @@ a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1
           </table>
     </table>
   </form>
+  <div style="
+      position: absolute;
+      right: 0;
+  ">
+    <a id="brackets_message" style="display: none"> Unbalanced brackets (wait / meet)!</a>
+    <img id="lea" src="res/lea0.png">
+  </div>
   <script src="./balls.js"></script>
 </body>
 
