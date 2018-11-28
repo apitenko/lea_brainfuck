@@ -8,4 +8,3 @@ https://en.wikipedia.org/wiki/Brainfuck
 
 https://sange.fi/esoteric/brainfuck/impl/interp/i.html
 
-Bye.
