@@ -4,16 +4,19 @@
 <head>
   <title>Lea interpreter</title>
   <style>
-body,td,caption{background:#cccccc;color:#000000;font-family:monospace;font-size:12px}
+    body,td,caption{background:#cccccc;color:#000000;font-family:monospace;font-size:12px}
 a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1px dashed}
 </style>
 </head>
 
-<body>
+<body style="
+      flex-direction: column;
+      display: flex;
+      align-content: center;">
   <form id="f">
     <table width="100%" border=0>
       <tr>
-        <td width="40%" align=left valign=top>
+        <td style="width:30%;" align=left valign=top>
           <table border=1 cellspacing=0 cellpadding=5>
             <caption><s>brainfuck</s> <b>Lea commands</b>
             <tr>
@@ -53,16 +56,17 @@ a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1
               <td>#</td>
               <td>display debugging info (in debug mode)
             <tr>
-              <td colspan=3 align=center>Separate words with spaces. Words are case-insensitive. Lea can't speak any other words, thus, they will be ignored.
+              <td colspan=3 align=center>Separate words with spaces. Words are case-insensitive. Lea can't speak any
+                other words, thus, they will be ignored.
           </table>
-          <br/>
-            <a href="https://github.com/apitenko/lea_brainfuck">Lea sources</a> |
-            <a href="https://sange.fi/esoteric/brainfuck/impl/interp/i.html">Original</a>
-        <td width="60%" align=center valign=top>
+          <br />
+          <a target="_blank" href="https://github.com/apitenko/lea_brainfuck">Lea sources</a> |
+          <a target="_blank" href="https://sange.fi/esoteric/brainfuck/impl/interp/i.html">Original</a>
+        <td style="width:60%;" align=center valign=top>
           <table width="1%" border=0>
             <tr>
               <td align=left valign=bottom>
-                <b><span class=t title="Warning: clicking these links will replace the existing code with a new programsorry... ">programs:</span></b>
+                <b><span class=t title="Warning: clicking these links will replace the existing code with a new program. ">programs:</span></b>
                 <a href="javascript:void(0)" onClick="b.value='Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! wait Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Bye. (nods) meet Hi! sorry...   H\nBye. Lea! Lea! Lea! wait Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Bye. (nods) meet Hi! sorry...     i\nwait (nods) meet Bye. Lea! Lea! Lea! wait Hi! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Lea! Bye. (nods) meet Hi! sorry...  !'">hello</a>
                 <a href="javascript:void(0)" onClick="b.value='Thanks! Wait sorry thanks Meet'">echo</a>
                 <a href="javascript:void(0)" onClick="b.value='Lea! wait Hi! thanks! meet Bye. (nods) wait Lea! sorry... Bye. (nods) meet '">reverse_input</a>
@@ -78,22 +82,32 @@ a:link,a:visited{color:#330099}a:hover,a:active{color:#ffffff}.t{border-bottom:1
                 Prompt for input:<input type=checkbox id="r"><br>Alert when finished:<input type=checkbox id="w">
             <tr>
               <td colspan=3>
-                <textarea id="b" cols=50 rows=9></textarea>
+                <textarea id="b" cols=70 rows=9></textarea>
             <tr>
               <td><b>code ^</b></td>
               <td align=right><input type=button value=execute onClick="x(b.value)"> <input type=button value=clear
                   onClick="b.value=''">
           </table>
-          <br><b>input:</b><input type=text id="i" size=44> <input type=button value=clear onClick="i.value=''">
+          <br><b>input:</b><input type=text id="i" value="12345_" size=61> <input type=button value=clear onClick="i.value=''">
           <table width="1%" border=0>
             <tr>
-              <td colspan=2><textarea id="o" cols=50 rows=4></textarea>
+              <td colspan=2><textarea id="o" cols=70 rows=4></textarea>
             <tr>
               <td><b>output ^</b></td>
               <td align=right><input type=button value=clear onClick="o.value=''">
           </table>
     </table>
   </form>
+  <div style="
+      flex-direction: row-reverse;
+      display: flex;
+    width: 100%;
+  ">
+    <div style="width:20%;"></div>
+    <img id="lea" src="res/lea0.png">
+    <a id="brackets_message" style="display: flex;
+    flex-direction: column-reverse;">Hi!</a>
+  </div>
   <script src="./balls.js"></script>
 </body>
 
